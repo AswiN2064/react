@@ -1,38 +1,144 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  background-image: url('https://images.unsplash.com/photo-1617042375876-a13e36732a04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE4fHxkZXZlbG9wZXJ8ZW58MHx8fHwxNjY1NTk2Nzgx&ixlib=rb-1.2.1&q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Add position: relative to allow positioning the .details-section */
+}
+
+.details-section {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(222, 229, 238, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 0 10px cyan;
+  padding: 20px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  background-image: url('asset\1667532213675.jpg'); /* Add your profile photo URL */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.details-content {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.details-content h2 {
+  font-size: 24px;
+  color: #333333;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 1s alternate-reverse;
+.details-content p {
+  font-size: 16px;
+  color: #555555;
+}
+
+.name-box {
+  position: relative; /* Add position: relative to allow positioning the ::before pseudo-element */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.name-box::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  animation: neon-move 20s infinite, neon-slide 4s infinite linear;
+}
+
+/* Neon Light Animations */
+@keyframes neon-move {
+  0% {
+    box-shadow: 0 0 10px cyan;
+    transform: translateX(0);
+  }
+  50% {
+    box-shadow: 0 0 30px cyan;
+    transform: translateX(100px); /* Adjust the value as needed to control the movement distance */
+  }
+  100% {
+    box-shadow: 0 0 10px cyan;
+    transform: translateX(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.element {
+  /* Other styles for the element */
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 2px solid cyan;
+  /* Animations */
+  animation: neon-move 2s infinite, neon-slide 4s infinite linear; /* You can adjust the durations as needed */
 }
 
-.App-link {
-  color: #61dafb;
+
+.name-box {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  animation: neon-move 2s alternate-reverse;
+  /* padding-left: 60%;
+  scroll-padding-top:initial; */
+  /* scroll-padding-top:initial; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #555555;
+  text-decoration: none;
 }
