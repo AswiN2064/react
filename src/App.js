@@ -87,4 +87,4 @@ const YearInfo = () => {
   );
 };
 
-export default YearInfo;
+export default App;

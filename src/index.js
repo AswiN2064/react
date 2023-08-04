@@ -41,13 +41,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import YearInfo from './YearInfo'; // Import the newly created YearInfo component
+// import YearInfo from './YearInfo'; // Import the newly created YearInfo component
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <YearInfo /> {/* Render the YearInfo component */}
+    {/* <YearInfo /> Render the YearInfo component */}
   </React.StrictMode>,
   document.getElementById('root')
 );
